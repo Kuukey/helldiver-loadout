@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Equipment from './pages/Equipment';
 import Loadout from './pages/Loadout';
@@ -9,13 +9,15 @@ import Loadout from './pages/Loadout';
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/Equipment" component={Equipment}/>
-          <Route exact path="/Loadout" component={Loadout}/>
-        </Switch>
-      </div>
+        <Header />
+        <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/equipment" element={<Equipment />} />
+          <Route path="/loadout" element={<Loadout />} />
+        </Routes>
+        </main>
+      <Footer />
     </Router>
   );
 }
