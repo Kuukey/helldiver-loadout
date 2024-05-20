@@ -48,3 +48,7 @@ nav a {
 main {
   padding: 1em;
 }
+
+.new-line-text {
+  white-space: pre-line;
+}
