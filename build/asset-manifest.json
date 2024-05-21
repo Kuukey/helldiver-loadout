@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/helldiver-loadout/static/css/main.e0cbfea4.chunk.css",
+    "main.js": "/helldiver-loadout/static/js/main.ba65806e.chunk.js",
+    "main.js.map": "/helldiver-loadout/static/js/main.ba65806e.chunk.js.map",
+    "runtime-main.js": "/helldiver-loadout/static/js/runtime-main.0cfcfb04.js",
+    "runtime-main.js.map": "/helldiver-loadout/static/js/runtime-main.0cfcfb04.js.map",
+    "static/js/2.fa5e0436.chunk.js": "/helldiver-loadout/static/js/2.fa5e0436.chunk.js",
+    "static/js/2.fa5e0436.chunk.js.map": "/helldiver-loadout/static/js/2.fa5e0436.chunk.js.map",
+    "static/js/3.8c251bb1.chunk.js": "/helldiver-loadout/static/js/3.8c251bb1.chunk.js",
+    "static/js/3.8c251bb1.chunk.js.map": "/helldiver-loadout/static/js/3.8c251bb1.chunk.js.map",
+    "index.html": "/helldiver-loadout/index.html",
+    "precache-manifest.155aa18b625a8a6f5c101a1e86975b3e.js": "/helldiver-loadout/precache-manifest.155aa18b625a8a6f5c101a1e86975b3e.js",
+    "service-worker.js": "/helldiver-loadout/service-worker.js",
+    "static/css/main.e0cbfea4.chunk.css.map": "/helldiver-loadout/static/css/main.e0cbfea4.chunk.css.map",
+    "static/js/2.fa5e0436.chunk.js.LICENSE.txt": "/helldiver-loadout/static/js/2.fa5e0436.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/helldiver-loadout/static/media/background1.84575ef8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cfcfb04.js",
+    "static/js/2.fa5e0436.chunk.js",
+    "static/css/main.e0cbfea4.chunk.css",
+    "static/js/main.ba65806e.chunk.js"
+  ]
+}
