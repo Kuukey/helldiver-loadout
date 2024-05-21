@@ -1,11 +1,11 @@
 import React from 'react';
-import FetchEquipment from '../components/FetchEquipment';
+import FetchOffensives from '../components/FetchOffensives';
 
 function Equipment() {
     return (
         <div>
             <h1>Equipment Page</h1>
-            <FetchEquipment />
+            <FetchOffensives />
         </div>
     )
 }

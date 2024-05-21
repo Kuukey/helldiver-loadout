@@ -1,0 +1,157 @@
+{
+  "weapons": [
+    {
+      "id": 1,
+      "type": "Assault Rifle",
+      "name": "AR-23 Liberator",
+      "imageUrl": "/images/ar_23_liberator",
+      "stats": {
+        "damage": 55,
+        "capacity": 45,
+        "fireRate": 640,
+        "recoil": 15
+      }
+    },
+    {
+      "id": 2,
+      "type": "Shotgun",
+      "name": "SG-225 Breaker",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 330,
+        "capacity": 13,
+        "fireRate": 300,
+        "recoil": 55
+      }
+    },
+    {
+      "id": 3,
+      "type": "Marksman Rifle",
+      "name": "R-63CD Diligence",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 112,
+        "capacity": 20,
+        "fireRate": 350,
+        "recoil": 35
+      }
+    }
+  ],
+  "secondaryWeapons": [
+    {
+      "id": 1,
+      "type": "Pistol",
+      "name": "P-2 Peacemaker",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 60,
+        "capacity": 15,
+        "fireRate": 900,
+        "recoil": 23
+      }
+    },
+    {
+      "id": 2,
+      "type": "Pistol",
+      "name": "P-19 Redeemer",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 60,
+        "capacity": 32,
+        "fireRate": 1100,
+        "recoil": 11
+      }
+    },
+    {
+      "id": 3,
+      "type": "Pistol",
+      "name": "P-4 Senator",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 175,
+        "capacity": 6,
+        "fireRate": 200,
+        "recoil": 43
+      }
+    }
+  ],
+  "grenades": [
+    {
+      "id": 1,
+      "name": "G-12 High Explosive",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 400,
+        "penetration": 4,
+        "blastRadius": 5,
+        "fuseTime": 3.5 
+      }
+    },
+    {
+      "id": 2,
+      "name": "G-6 Frag",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 100,
+        "penetration": 3,
+        "blastRadius": 5,
+        "fuseTime": 2.4
+      }
+    },
+    {
+      "id": 3,
+      "name": "G-16 Impact",
+      "imageUrl": "/images/",
+      "stats": {
+        "damage": 100,
+        "penetration": 4,
+        "blastRadius": 5,
+        "fuseTime": 0
+      }
+    }
+  ],
+  "stratagems": [
+    {
+      "id": 1,
+      "type": "Supply: Weapons",
+      "name": "Stalwart",
+      "imageUrl": "/images/",
+      "description": "The Stalwart is a support weapon specializing in disposing of large amounts of unarmored targets."
+    },
+    {
+      "id": 2,
+      "type": "Supply: Backpacks",
+      "name": "AX/LAS-5 \"Guard Dog\" Rover",
+      "imageUrl": "/images/",
+      "description": "When you select this stratagem, you will have a flying robot sentry circle around you, clearing away the common chadd using the LAS-5 Scythe."
+    },
+    {
+      "id": 3,
+      "type": "Supply: Vehicles",
+      "name": "EXO-45 Patriot Exosuit",
+      "imageUrl": "/images/",
+      "description": "The EXO-45 Patriot Exosuit is equipped with fourteen rockets and a mini-gun capable of holding a thousand rounds of ammunition."
+    },
+    {
+      "id": 4,
+      "type": "Offensive: Eagle",
+      "name": "Eagle Airstrike",
+      "imageUrl": "/images/",
+      "description": "Eagle-1 will carpet bomb the area with 6 unguided bombs."
+    },
+    {
+      "id": 5,
+      "type": "Offensive: Orbital Strikes",
+      "name": "Orbital Precision Strike",
+      "imageUrl": "/images/",
+      "description": "The Orbital Precision strike is a precision, explosive shot fired from the Super Destroyer's ATLAS cannon."
+    },
+    {
+      "id": 6,
+      "type": "Defensive",
+      "name": "Gatling Sentry",
+      "imageUrl": "/images/",
+      "description": "Galting Sentry has an incredibly high rate of fire and ammo reserve, but on the battlefield you will see it wasting a portion of it's ammunition."
+    }
+  ]
+}

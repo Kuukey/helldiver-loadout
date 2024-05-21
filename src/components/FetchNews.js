@@ -4,8 +4,8 @@ import DOMPurify from 'dompurify';
 // Function to parse and process the message content
 const processMessage = (message) => {
   // Replace <i=3> with <span class="news-header"> and </i> with </span>
-  let processedContent = message.replace(/<i=3>/g, '<span class="news-header">');
-  processedContent = processedContent.replace(/<\/i>/g, '</span>');
+  let processedContent = message.replace(/<i=3>/g, '<h1 class="news-header">');
+  processedContent = processedContent.replace(/<\/i>/g, '</h1>');
   // Replace '\n' with <br> tags
   processedContent = processedContent.replace(/\n/g, '<br>');
   return processedContent;
@@ -63,7 +63,6 @@ const FetchNews = () => {
 
   return (
     <div>
-      <h1>Fetched Data</h1>
       {lastMessage.map((data) => (
         <Message key={data.id} content={data.message} />
       ))}

@@ -1,0 +1,25 @@
+.weapons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.weapons-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.weapon-item {
+    margin: 10px;
+}
+
+.weapon-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.weapon-details {
+    margin-left: 10px;
+}
