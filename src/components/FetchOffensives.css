@@ -1,25 +1,28 @@
 .weapons-container {
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
 }
 
 .weapons-list {
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
     padding: 0;
-    margin: 0;
-    list-style-type: none;
 }
 
 .weapon-item {
     margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    text-align: center;
 }
 
 .weapon-image {
-    width: 100px; /* Adjust size as needed */
+    max-width: 100%;
     height: auto;
 }
 
 .weapon-details {
-    margin-left: 10px;
+    margin-top: 10px;
 }

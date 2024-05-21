@@ -10,6 +10,7 @@ function FetchOffensives() {
     });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [visibleDescriptions, setVisibleDescriptions] = useState({})
 
     useEffect(() => {
         // Fetch data from the API
@@ -30,6 +31,13 @@ function FetchOffensives() {
             });
     }, []);
 
+    const toggleDescription = (id) => {
+      setVisibleDescriptions(prevState => ({
+        ...prevState,
+        [id]: !prevState[id]
+      }))
+    }
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -38,6 +46,9 @@ function FetchOffensives() {
         return <div>Error: {error.message}</div>;
     }
 
+
+    const pubURL = process.env.PUBLIC_URL;
+
     return (
         <div className="weapons-container">
             <h2>Primary Weapons</h2>
@@ -45,7 +56,7 @@ function FetchOffensives() {
                 {/* Map over primary weapons data */}
                 {data.weapons.map((weapon, index) => (
                   <li key={index} className="weapon-item">
-                        <img src={weapon.imageUrl} alt={weapon.name} className="weapon-image" />
+                        <img src={`${pubURL}${weapon.imageUrl}`} alt={weapon.name} className="weapon-image" />
                         <div className="weapon-details">
                             <p>{weapon.name}</p>
                             <p>Damage: {weapon.stats.damage}</p>
@@ -62,7 +73,7 @@ function FetchOffensives() {
                 {/* Map over secondary weapons data */}
                 {data.secondaryWeapons.map((weapon, index) => (
                   <li key={index} className="weapon-item">
-                        <img src={weapon.imageUrl} alt={weapon.name} className="weapon-image"/>
+                        <img src={`${pubURL}${weapon.imageUrl}`} alt={weapon.name} className="weapon-image"/>
                         <div className="weapon-details">
                             <p>{weapon.name}</p>
                             <p>Damage: {weapon.stats.damage}</p>
@@ -79,7 +90,7 @@ function FetchOffensives() {
                 {/* Map over grenades data */}
                 {data.grenades.map((grenade, index) => (
                   <li key={index} className="weapon-item">
-                        <img src={grenade.imageUrl} alt={grenade.name} className="weapon-image"/>
+                        <img src={`${pubURL}${grenade.imageUrl}`} alt={grenade.name} className="weapon-image"/>
                         <div className="weapon-details">
                             <p>{grenade.name}</p>
                             <p>Damage: {grenade.stats.damage}</p>
@@ -94,10 +105,13 @@ function FetchOffensives() {
                 {/* Map over stratagems data */}
                 {data.stratagems.map((stratagem, index) => (
                       <li key={index} className="weapon-item">
-                        <img src={stratagem.imageUrl} alt={stratagem.name} className="weapon-image"/>
+                        <img src={`${pubURL}${stratagem.imageUrl}`} alt={stratagem.name} className="weapon-image"/>
                         <div className="weapon-details">
                             <p>{stratagem.name}</p>
-                            <p>Description: {stratagem.description}</p>
+                            <button onClick={() => toggleDescription(stratagem.id)}>
+                              {visibleDescriptions[stratagem.id] ? 'Hide Description' : 'Show Description'}
+                            </button>
+                            {visibleDescriptions[stratagem.id] && <p>{stratagem.description}</p>}
                         </div>
                     </li>
                 ))}
