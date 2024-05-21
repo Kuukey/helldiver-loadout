@@ -3,8 +3,8 @@ import FetchOffensives from '../components/FetchOffensives';
 
 function Equipment() {
     return (
-        <div>
-            <h1>Equipment Page</h1>
+        <div >
+            <h1 className="order-title">Equipment</h1>
             <FetchOffensives />
         </div>
     )

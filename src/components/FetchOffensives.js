@@ -10,7 +10,7 @@ function FetchOffensives() {
     });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [visibleDescriptions, setVisibleDescriptions] = useState({})
+    const [visibleExtra, setVisibleExtra] = useState({})
 
     useEffect(() => {
         // Fetch data from the API
@@ -31,8 +31,8 @@ function FetchOffensives() {
             });
     }, []);
 
-    const toggleDescription = (id) => {
-      setVisibleDescriptions(prevState => ({
+    const toggleExtra = (id) => {
+      setVisibleExtra(prevState => ({
         ...prevState,
         [id]: !prevState[id]
       }))
@@ -55,16 +55,18 @@ function FetchOffensives() {
             <ul className="weapons-list">
                 {/* Map over primary weapons data */}
                 {data.weapons.map((weapon, index) => (
-                  <li key={index} className="weapon-item">
-                        <img src={`${pubURL}${weapon.imageUrl}`} alt={weapon.name} className="weapon-image" />
+                    <li key={index} className={'weapon-item'}>
+                    <img src={`${pubURL}${weapon.imageUrl}`} alt={weapon.name} className="weapon-image"/>
+                    <div className="weapon-header">
+                        <p>{weapon.name}</p>
+                    </div>
                         <div className="weapon-details">
-                            <p>{weapon.name}</p>
                             <p>Damage: {weapon.stats.damage}</p>
                             <p>Capacity: {weapon.stats.capacity}</p>
                             <p>Fire Rate: {weapon.stats.fireRate}</p>
                             <p>Recoil: {weapon.stats.recoil}</p>
                         </div>
-                    </li>
+                </li>
                 ))}
             </ul>
 
@@ -72,7 +74,7 @@ function FetchOffensives() {
             <ul className="weapons-list">
                 {/* Map over secondary weapons data */}
                 {data.secondaryWeapons.map((weapon, index) => (
-                  <li key={index} className="weapon-item">
+                  <li key={index} className="weapon-item" id="weapon-item">
                         <img src={`${pubURL}${weapon.imageUrl}`} alt={weapon.name} className="weapon-image"/>
                         <div className="weapon-details">
                             <p>{weapon.name}</p>
@@ -108,10 +110,10 @@ function FetchOffensives() {
                         <img src={`${pubURL}${stratagem.imageUrl}`} alt={stratagem.name} className="weapon-image"/>
                         <div className="weapon-details">
                             <p>{stratagem.name}</p>
-                            <button onClick={() => toggleDescription(stratagem.id)}>
-                              {visibleDescriptions[stratagem.id] ? 'Hide Description' : 'Show Description'}
+                            <button onClick={() => toggleExtra(stratagem.id)}>
+                              {visibleExtra[stratagem.id] ? 'Hide Description' : 'Show Description'}
                             </button>
-                            {visibleDescriptions[stratagem.id] && <p>{stratagem.description}</p>}
+                            {visibleExtra[stratagem.id] && <p>{stratagem.description}</p>}
                         </div>
                     </li>
                 ))}

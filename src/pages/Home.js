@@ -6,9 +6,8 @@ function Home() {
     return (
         <div>
             <div>
-                <h2>HELLDIVERS 2 NEWS</h2>
-                <FetchNews />
                 <FetchOrders />
+                <FetchNews />
             </div>
         </div>
     );

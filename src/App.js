@@ -5,12 +5,13 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Equipment from './pages/Equipment';
 import Loadout from './pages/Loadout';
+import './App.css'
 
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
         <Header />
-        <main>
+        <main className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/equipment" element={<Equipment />} />

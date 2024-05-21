@@ -1,10 +1,14 @@
 .weapons-container {
     padding: 20px;
+    text-align: center;
+    min-height: calc(100vh - 1500px); /* Adjust 100px based on your footer height */
 }
+
 
 .weapons-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     padding: 0;
 }
@@ -12,10 +16,18 @@
 .weapon-item {
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px dashed #ccc; /* Increased border size */
     border-radius: 4px;
     width: 200px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Opaque black background */
+    color: white; /* Text color */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.weapon-item:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background on hover */
+    transform: scale(1.05); /* Grow the element slightly on hover */
 }
 
 .weapon-image {
@@ -26,3 +38,20 @@
 .weapon-details {
     margin-top: 10px;
 }
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Use a font commonly associated with tech or military themes */
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold; /* Make the text bold */
+    color: #f0f0f0; /* White or light color for text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Increase letter spacing for a tech-inspired feel */
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: #333; /* Dark blue background color with opacity */
+    border: 2px solid #fff; /* White border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a subtle shadow */
+    max-width: 300px; /* Limit the width of the h2 element */
+    margin: 0 auto; /* Center the h2 element horizontally */
+  }
+  
